@@ -23,6 +23,11 @@ class Book(BaseModel):
     title: str
     author: str
     genre: str
+    published_date: date
+    summary: str
+    
+
+
 
     class Config:
         orm_mode = True

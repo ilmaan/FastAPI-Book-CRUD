@@ -45,7 +45,9 @@ def create_book(book: BookSchema, db: Session = Depends(get_db)):
     db_book = BookModel(  # Use the SQLAlchemy model here
         title=book.title,
         author=book.author,
-        genre=book.genre
+        genre=book.genre,
+        summary=book.summary,
+        published_date=book.published_date
     )
     db.add(db_book)
     db.commit()
