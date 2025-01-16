@@ -1,6 +1,8 @@
-fastapi
-uvicorn
-sqlalchemy
-# sqlite
-pydantic
-python-jose
+fastapi==0.70.0
+uvicorn==0.15.0
+sqlalchemy==1.4.25
+# sqlite (usually included with Python)
+pydantic==1.8.2
+python-jose==3.3.0
+requests==2.26.0  # Example of a common package
+numpy==1.21.2     # Example of a common package
