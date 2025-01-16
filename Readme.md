@@ -71,14 +71,10 @@ This is a FastAPI application for managing a collection of books. It provides a 
 - Access real-time book updates at `/booksdisplay`.
 - WebSocket endpoint available at `/ws` for receiving real-time messages.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## Contact
 
-For questions or support, please contact [your-email@example.com].
+For questions or support, please contact [ilmaanzia@gmail.com].
