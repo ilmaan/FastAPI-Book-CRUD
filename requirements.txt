@@ -7,3 +7,4 @@ python-jose
 requests  # Example of a common package
 numpy     # Example of a common package
 passlib
+python-multipart
