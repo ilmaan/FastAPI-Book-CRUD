@@ -10,24 +10,28 @@ from pydantic import constr
 
 Base = declarative_base()
 
+
+class Genres(Enum):
+    Adventure="Adventure"
+    Action="Action"
+    Comedy="Comedy"
+    string="string"
+
+
+
+
+
 class BookBase(BaseModel):
     # id: Optional[int]
     title: Annotated[str, constr(min_length=1, max_length=100)]
     author: Annotated[str, constr(min_length=1, max_length=50)]
     published_date: date
     summary: str
-    genre: str
+    genre: Genres
 
 class BookCreate(BookBase):
     pass
 
-
-
-class Genres(Enum):
-    Adventure="Adventure"
-    Action="Action"
-    Comdedy="Comdedy"
-    string="string"
 
 
 

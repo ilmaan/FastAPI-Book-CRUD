@@ -242,7 +242,7 @@ async def get_books_display(db: Session = Depends(get_db)):
                 </tbody>
             </table>
             <script>
-                var ws = new WebSocket('ws://localhost:8000/ws');
+                var ws = new WebSocket('wss://fastapi-book-crud-nvz8.onrender.com//ws');
                 ws.onopen = function() {{ console.log('WebSocket connection established'); }};
                 ws.onmessage = function(event) {{
                     var messages = document.getElementById('messages');
