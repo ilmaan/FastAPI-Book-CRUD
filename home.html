@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books CRUD FastAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .api-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .api-list li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Books CRUD FastAPI Application</h1>
+    <p>This application is designed to manage a collection of books using a CRUD (Create, Read, Update, Delete) interface. It is built with FastAPI, a modern, fast (high-performance) web framework for building APIs with Python 3.7+.</p>
+
+    <h2>Purpose</h2>
+    <p>The purpose of this application is to provide a simple and efficient way to manage book records. It is intended for educational and testing purposes, demonstrating how to build a RESTful API with FastAPI.</p>
+
+    <h2>Scope</h2>
+    <p>The application allows users to perform the following operations:</p>
+    <ul class="api-list">
+        <li><strong>Create:</strong> Add new books to the collection.</li>
+        <li><strong>Read:</strong> Retrieve details of books from the collection.</li>
+        <li><strong>Update:</strong> Modify existing book records.</li>
+        <li><strong>Delete:</strong> Remove books from the collection.</li>
+    </ul>
+
+    <h2>Available APIs</h2>
+    <ul class="api-list">
+        <li><strong>GET /books:</strong> Retrieve a list of all books.</li>
+        <li><strong>POST /books:</strong> Add a new book to the collection.</li>
+        <li><strong>GET /books/{id}:</strong> Retrieve details of a specific book by ID.</li>
+        <li><strong>PUT /books/{id}:</strong> Update details of a specific book by ID.</li>
+        <li><strong>DELETE /books/{id}:</strong> Delete a specific book by ID.</li>
+    </ul>
+
+    <h2>Authentication Details</h2>
+    <p>For testing purposes, use the following credentials:</p>
+    <ul>
+        <li><strong>Username:</strong> testuser</li>
+        <li><strong>Password:</strong> password</li>
+    </ul>
+</body>
+</html>

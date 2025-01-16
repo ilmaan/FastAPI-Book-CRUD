@@ -19,6 +19,9 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exception_handlers import http_exception_handler, request_validation_exception_handler
 
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
 
 
@@ -42,6 +45,18 @@ app = FastAPI(docs_url="/swagger", redoc_url="/redoc")
 
 
 
+# @app.get("/")
+# async def read_root():
+#     return {"message": "BOOKS CRUD FASTAPI","FOR TESTING PURPOSES ONLY":'FOR AUTHENTICSTION USE',"username":'testuser',"password":"password"}
+
+
+
+# Specify the directory where your templates are stored
+templates = Jinja2Templates(directory=".")
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
 
 
 # Dependency to get the database session
