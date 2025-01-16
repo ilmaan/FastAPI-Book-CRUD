@@ -46,11 +46,6 @@ app = FastAPI(docs_url="/swagger", redoc_url="/redoc")
 
 
 
-# @app.get("/")
-# async def read_root():
-#     return {"message": "BOOKS CRUD FASTAPI","FOR TESTING PURPOSES ONLY":'FOR AUTHENTICSTION USE',"username":'testuser',"password":"password"}
-
-
 
 # Specify the directory where your templates are stored
 templates = Jinja2Templates(directory=".")
