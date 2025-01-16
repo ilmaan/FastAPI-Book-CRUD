@@ -3,6 +3,6 @@ uvicorn
 sqlalchemy
 #  Python)
 pydantic
-python
+python-jose
 requests  # Example of a common package
 numpy     # Example of a common package
