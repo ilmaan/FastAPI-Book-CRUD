@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 from passlib.context import CryptContext  # For password hashing
 import asyncio
 from pydantic import BaseModel
+from enum import Enum
 
 
 from fastapi.exceptions import RequestValidationError
@@ -171,8 +172,15 @@ async def update_book(book_id: int, book: BookCreate, db: Session = Depends(get_
     db_book = db.query(BookModel).filter(BookModel.id == book_id).first()
     if db_book is None:
         raise HTTPException(status_code=404, detail="Book not found")
-    for key, value in book.dict().items():
+    
+    # Convert enum to string if necessary
+    book_data = book.dict()
+    if isinstance(book_data.get('genre'), Enum):
+        book_data['genre'] = book_data['genre'].value
+    
+    for key, value in book_data.items():
         setattr(db_book, key, value)
+    
     db.commit()
     await notify_clients(f"Book updated: {db_book.title} by {db_book.author}")
     return db_book

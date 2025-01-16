@@ -9,3 +9,4 @@ numpy     # Example of a common package
 passlib
 python-multipart
 jinja2
+websockets
